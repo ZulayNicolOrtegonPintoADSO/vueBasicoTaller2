@@ -18,5 +18,117 @@
 </head>
 <body>
     <div id="app"> 
+        <div><!--Entidad Campus-->
+            <strong>CAMPUS</strong>
+            <form> 
+                <select name="ciudad"><!--Determinar datos de contacto de las sedes de Bucaramanga, Bogotá, Medellín, y México-->
+                    <option>Bucaramanga</option>
+                    <option>Bogotá</option>
+                    <option>Medellín</option>
+                    <option>México</option>
+                </select>
+            </form>
+        </div>
+
+        <br>
+
+        <div> <!--Entidad Profesores-->
+            <strong>PROFESORES</strong>
+            <form> 
+                <input v-model="nombre" type="text" placeholder="Nombre Completo">
+                <input v-model="telefono" type="tel" placeholder="Teléfono">
+                <input v-model="email" type="email" placeholder="Email">
+
+                <div>  <!--Sub entidad TEAMS-->
+                    <label>* TEAMS</label> <br> 
+                    <form>
+                        <input v-model="dia" type="date">
+                        <input v-model="hora" type="time">
+                        
+                        <div> <!--Sub entidad SALÓN-->
+                            <label>** SALÓN</label> <br>
+                            <form>
+                                <input v-model="num_salon" type="number" placeholder="Número del salón">
+                                <input v-model="num_piso" type="number" placeholder="Número de piso">
+                            </form>
+                        </div>
+                    </form>
+                </div>
+            </form>
+        </div>
+
+        <br>
+
+        <div> <!--Entidad Estudiantes-->
+            <strong>ESTUDIANTES</strong>
+            <form> 
+                <input v-model="nombre" type="text" placeholder="Nombre Completo">
+                <input v-model="telefono" type="tel" placeholder="Teléfono">
+                <input v-model="email" type="email" placeholder="Email">
+                <input v-model="barrio" type="text" placeholder="Barrio">
+                <input v-model="transporte" type="text" placeholder="Medio de transporte">
+
+                <div>
+                    <label>* TEAMS</label> <br>
+                    <form>
+                        <input v-model="dia" type="date">
+                        <input v-model="hora" type="time">
+                        
+                        <div>
+                            <label>** SALÓN</label> <br>
+                            <form>
+                                <input v-model="num_salon" type="number" placeholder="Número del salón">
+                                <input v-model="num_piso" type="number" placeholder="Número de piso">
+                            </form>
+                        </div>
+                    </form>
+                </div>
+            </form>
+        </div>
         
+        <br>
+
+        <div> <!--Entidad Niveles-->
+            <strong>NIVELES</strong>
+            <form> 
+                <select name="nivel"><!--Determinar datos de contacto de las sedes de Bucaramanga, Bogotá, Medellín, y México-->
+                    <option>Técnico</option>
+                    <option>Tecnólogo</option>
+                    <option>Bachiller</option>
+                </select>
+
+                <br>
+
+                <label>Electiva</label> <input v-model="electiva" type="checkbox"> <br>
+                <label>Obligatoria</label> <input v-model="obliatoria" type="checkbox">
+            </form>
+        </div>
+
+        <br>
+
+        <div><!--Entidad tecnologías-->
+            <strong>TECNOLOGÍAS</strong>
+            <form> 
+                <input>
+            </form>
+        </div>
+
+        <br>
+
+        <div>
+            <strong>TEAMS</strong>
+            <form> 
+                <input>
+            </form>
+        </div>
+
+        <br>
+
+        <div>
+            <strong>ROADMAP</strong>
+            <form> 
+                <input>
+            </form>
+        </div>
+
 </body>
